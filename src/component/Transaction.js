@@ -6,11 +6,11 @@ const Transaction = () => {
 
     
 
-    const Data = [{ title: "ค่ารักษาพยาบาล", amount: "2,000" ,unit:"USD" },
-    { title: "ค่าน้ำมัน", amount: "5,000" , unit:"THB"},
-    { title: "ค่าเช่าบ้าน", amount: "8,000" },
-    { title: "เงินเดือน", amount: "80,000" },
-    { title: "เงินอื่นๆ" , amount: "20,500"}
+    const Data = [{ id:1, title: "ค่ารักษาพยาบาล", amount: "2,000" ,unit:"USD" },
+    { id:2, title: "ค่าน้ำมัน", amount: "5,000" , unit:"THB"},
+    { id:3, title: "ค่าเช่าบ้าน", amount: "8,000" },
+    { id:4, title: "เงินเดือน", amount: "80,000" },
+    { id:5, title: "เงินอื่นๆ" , amount: "20,500"}
     ]
 
 
@@ -28,7 +28,7 @@ const Transaction = () => {
             
             {Data.map((element)=>{
             // return <Item title={element.title} amount={element.amount} />    
-                return <Item {...element} /> // เขียนแบบ Spread Operator
+                return <Item {...element} key={element.id} /> // เขียนแบบ Spread Operator
             })}
         </ul>
     )
