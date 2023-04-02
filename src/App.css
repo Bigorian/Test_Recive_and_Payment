@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Sriracha', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    margin: 1rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* h1{
+    padding:0.5rem;
+    margin-top: 0.5rem;
+    /* การใส่ margin-top ให้เป็น 0.5rem เพื่อให้ element ภายในห่างจากด้านบน 0.5 เพื่อให้มันอยู่ตรงกลาง */
+
+/* }  */
+
+
+/* ul{ */
+/* padding : 0.5rem; */
+/* margin-bottom: 0.5rem; */
+/* การใส่ margin-bottom ให้เป็น 0.5rem เพื่อให้ element ภายในห่างจากด้านล่าง 0.5 เพื่อให้มันอยู่ตรงกลาง  */
+/* }  */
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.container {
+    margin: 30px auto;
+    width: 350px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    /* overflow: hidden; */
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -1,0 +1,15 @@
+.list-box li{
+    list-style-type: none;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
