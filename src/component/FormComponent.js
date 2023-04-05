@@ -1,15 +1,18 @@
 import './FormComponent.css';
-
-
-
-
-
 const Form_Component = () => {
+
+const inputTitle = (event) =>{
+    console.log("Hello")
+    
+}
+
+
+
     return (
         <form>
             <div className="form-control">
                 <label>ชื่อรายการ</label>
-                <input type="text" placeholder="ระบุชื่อรายการของคุณ" />
+                <input type="text" placeholder="ระบุชื่อรายการของคุณ" onChange={inputTitle} />
             </div>
             <div className="form-control">
                 <label>จำนวนเงิน</label>
