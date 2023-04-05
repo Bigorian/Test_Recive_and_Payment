@@ -13,15 +13,15 @@ const Form_Component = () => {
             </div>
             <div className="form-control">
                 <label>จำนวนเงิน</label>
-                <input type="number" placeholder="ระบุจำนวนเงินของคุณ" />
+                <input type="number" placeholder="(+ รายรับ , - รายจ่าย)" />
             </div>
             <div>
-                <button>
+                <button type='submit' className='btn'>
                     เพิ่มข้อมูล
-
                 </button>
             </div>
         </form>
+
     )
 }
 
