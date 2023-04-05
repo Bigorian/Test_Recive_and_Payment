@@ -2,7 +2,7 @@ import './FormComponent.css';
 const Form_Component = () => {
 
 const inputTitle = (event) =>{
-    console.log("Hello")
+    console.log(event.target.value)
     
 }
 
