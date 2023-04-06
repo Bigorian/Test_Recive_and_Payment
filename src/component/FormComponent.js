@@ -1,20 +1,27 @@
 import './FormComponent.css';
+import { useState } from 'react';
 const Form_Component = () => {
 
 const inputTitle = (event) =>{
-    console.log(event.target.value)
+    setTitle(event.target.value)
     
 }
 
 // inputAmount
 const inputAmount = (event) =>{
-    console.log(event.target.value)
+    setAmount(event.target.value)
 }
 
 const saveItem = (event) =>{
     event.preventDefault()
     console.log("บันทึกข้อมูลเรียบร้อย")
 }
+
+
+// input useState
+const [title,setTitle] = useState('');
+const [amount,setAmount] = useState(0);
+
 
     return (
         <form onSubmit={saveItem}>
