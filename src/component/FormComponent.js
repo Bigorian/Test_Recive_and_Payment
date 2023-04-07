@@ -2,6 +2,8 @@ import './FormComponent.css';
 import { useState } from 'react';
 const Form_Component = () => {
 
+
+    // inputTitle
 const inputTitle = (event) =>{
     setTitle(event.target.value)
     
