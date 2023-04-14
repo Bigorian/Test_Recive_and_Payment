@@ -1,6 +1,9 @@
 import './FormComponent.css';
 import { useState } from 'react';
-const Form_Component = () => {
+import { v4 as uuidv4 } from 'uuid';
+const Form_Component = (props) => {
+
+
     // input useState
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState(0);
@@ -19,12 +22,23 @@ const Form_Component = () => {
     }
 
     const saveItem = (event) => {
-        event.preventDefault() // ใช้ในกรณีเมื่อกดปุ่ม Submit แล้วค่าจะถูกบันทึกไม่หายไป
+        event.preventDefault()
+        // ใช้ในกรณีเมื่อกดปุ่ม Submit แล้วค่าจะถูกบันทึกไม่หายไป
+
+
         const itemData = {
-            ee: title,
-            aa: amount
+            id: uuidv4(),
+            title: title,
+            amount: Number(amount)
         }
-        console.log(itemData);
+
+
+        props.onAddItem(itemData)
+        // ตรง(itemData) เป็นการส่งข้อมูลจาก Component ลูกไปหา Component แม่
+
+
+
+        // Clear State 
         setTitle('');
         setAmount(0);
     }

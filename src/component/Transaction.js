@@ -1,21 +1,10 @@
 import Item from "./Item";
-import { v4 as uuidv4 } from 'uuid';
 
 
 
-const Transaction = () => {
 
-    
-
-    const Data = [{  title: "ค่ารักษาพยาบาล", amount: "2,000" ,unit:"USD" },
-    {  title: "ค่าน้ำมัน", amount: "5,000" , unit:"THB"},
-    {  title: "ค่าเช่าบ้าน", amount: "8,000" },
-    {  title: "เงินเดือน", amount: "80,000" },
-    {  title: "เงินอื่นๆ" , amount: "20,500"}
-    ]
-
-
-
+const Transaction = (props) => {
+    const { items } = props
 
     return (
         <ul>
@@ -23,13 +12,13 @@ const Transaction = () => {
             <Item title={Data[1].title} amount={Data[1].amount} unit={Data[1].unit} />
             <Item title={Data[2].title} amount={Data[2].amount} unit={Data[0].unit} />
             <Item title={Data[3].title} amount={Data[3].amount} unit={Data[1].unit} /> */}
-            
-            
+
+
             {/* // เขียน แบบ ลูป */}
-            
-            {Data.map((element)=>{
-            // return <Item title={element.title} amount={element.amount} />    
-                return <Item {...element}  key={uuidv4()}/> // เขียนแบบ Spread Operator
+
+            {items.map((element) => {
+                // return <Item title={element.title} amount={element.amount} />    
+                return <Item {...element} key={element.id} /> // เขียนแบบ Spread Operator
             })}
         </ul>
     )
@@ -37,6 +26,13 @@ const Transaction = () => {
 
 
 export default Transaction;
+
+
+
+
+
+
+
 
 
 
