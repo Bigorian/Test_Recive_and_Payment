@@ -17,14 +17,14 @@ function App() {
     ]
 
     //สร้าง State
-    const [items, setItems] = useState(initData)
+    const [items, setItems] = useState([])
 
 
     //ข้อมูลที่ส่งในรูป Props ไปยังไฟล์ FromComponent
     const onAddNewItem = (newItem) => {
             //newItem คือข้อมูลที่ได้รับจาก FormComponent
         setItems((prevItem)=>{
-            return [newItem,...prevItem]
+            return [newItem/*,...prevItem*/]
         }
         //  โดยข้อมูลที่ได้จาก FormComponent จะอยู่ด้านบน แล้ว ตามมมาด้วย Arrat initData
         )
