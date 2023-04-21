@@ -11,5 +11,10 @@
     position: relative;
 }
 
+.expense {
+    border-right: 5px solid Red;
+}
 
-
+.income {
+    border-right: 5px solid Green;
+}

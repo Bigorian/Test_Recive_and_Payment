@@ -2,32 +2,34 @@ import './Item.css';
 
 
 
+
 const Item = (props) => {
    
-
-
-
-
-
     const {title,amount} = props  // เขียนเป็น Distructuring
-
-
-
-     //สถานะการเงินที่ส่งเข้ามาแต่ละรายการ
-     const status = amount<0 ?  "รายจ่าย":"รายรับ"  //เขียนแบบ Ternary
-
-
-
+    //สถานะการเงินที่ส่งเข้ามาแต่ละรายการ
+    const status = amount < 0 ? "expense" : "income"  //เขียนแบบ Ternary
+    // โดยเราจะเอา "expense" และ "income" มาปรับแต่งเป็น Style
     return (
         <div className='list-box'>
             <ul>
-                <li className="item-list">{title} <span>{amount}</span>  </li>
+                <li className={status}>{title}<span> {amount}</span>  </li>
             </ul>
         </div>
     )
-}
+ }
+ 
+ export default Item;
+ 
+ 
+ 
+ 
 
-export default Item;
+
+
+ 
+
+
+
 
 
 
