@@ -2,6 +2,7 @@ import Transaction from "./component/Transaction";
 import './App.css';
 import FormComponent from "./component/FormComponent";
 import { useState } from "react";
+import DataContext from "./data/DataContext";
 
 
 
@@ -16,10 +17,10 @@ function App() {
     //     { id: 5, title: "เงินอื่นๆ", amount: "20,500" }
     // ]
 
-    
-    
-    
-    
+
+
+
+
     //สร้าง State
     const [items, setItems] = useState([])
     //ข้อมูลที่ส่งในรูป Props ไปยังไฟล์ FromComponent
@@ -36,21 +37,23 @@ function App() {
     }
 
 
-
-
-
-
-
+    
+    
+    
     return (
-
-        <div className="container">
-            <h1>แอพบัญชีรายรับ-รายจ่าย</h1>
-            <FormComponent onAddItem={onAddNewItem} />
-            <Transaction items={items} />
-        </div>
+        <DataContext.Provider value={"kongruksiam"}>
+            <div className="container">
+                <h1>แอพบัญชีรายรับ-รายจ่าย</h1>
+                <FormComponent onAddItem={onAddNewItem} />
+                <Transaction items={items} />
+            </div>
+        </DataContext.Provider>
     );
 }
 export default App;
+
+
+
 
 
 

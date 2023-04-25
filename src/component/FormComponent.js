@@ -28,7 +28,7 @@ const Form_Component = (props) => {
             amount: Number(amount)
         }
         props.onAddItem(itemData)
-        // ตรง(itemData) เป็นการส่งข้อมูลจาก Component ลูกไปหา Component แม่
+        // ตรง(itemData) เป็นการส่งข้อมูลจาก Component ลูกไปหา Component แม่ส่งไปใน Parameter newItem
         // Clear State 
         setTitle('');
         setAmount(0);
